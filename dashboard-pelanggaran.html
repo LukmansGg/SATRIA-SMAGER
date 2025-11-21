@@ -39,50 +39,8 @@
 		</ul>
         
 
-        <div class="dashboard">
-            <!-- Sidebar (left) -->
-            <aside
-                class="sidebar"
-                role="navigation"
-                aria-label="Navigation Sidebar">
-                <br>
-                <br>
-                <div class="always-show-nav">
-                    <button class="nav-btn active">Laporkan</button>
-                    <button class="nav-btn">Statistik</button>
-                    <button class="nav-btn">Daftar Pelanggaran</button>
-                    <button class="nav-btn">Manajemen Sistem</button>
-                    <div class="spacer"></div>
-                    <div class="always-show-nav-bttom">
-                        <div style="display: flex; gap: 12px; align-items: center">
-                            <img
-                                src="/mnt/data/Screenshot 2025-11-20 172105.png"
-                                alt="avatar"
-                                style="
-                                    width: 48px;
-                                    height: 48px;
-                                    border-radius: 10px;
-                                    object-fit: cover;
-                                    border: 2px solid rgba(255, 255, 255, 0.06);
-                                " />
-                            <div style="font-weight: 700">Admin</div>
-                        </div>
-                        
-                        <button class="nav-btn logout" style="margin-top: 12px">
-                            LOG OUT
-                        </button>
-                    </div>
-                </div>
-            </aside>
-
+        <div class="dashboard
             <main class="main" role="main">
-                <div class="right_menu">
-                    <div class="menu">
-                        <div class="menu_bar1"></div>
-                        <div class="menu_bar2"></div>
-                        <div class="menu_bar3"></div>
-                    </div>
-                </div>
                 <div class="title">Daftar Pelanggaran</div>
                 <section class="card" aria-labelledby="form-title">
                     <div class="violation-table-container">
@@ -112,124 +70,6 @@
                         </div>
                     </div>
                 </section>
-
-                <section class="card" aria-labelledby="form-title" style="background: #7a6fafb6; color: white;">
-                    <h2 id="form-title" style="
-                                            text-align: center;
-                                            margin-bottom: 28px;
-                                            color: white;
-                                            font-size: 22px;
-                                        ">
-                        Manajement Sistem
-                    </h2>
-                    <div class="mgmt-grid">
-                    
-                        <div class="mgmt-card violation-card">
-                        <div class="card-decoration"></div>
-                        <div class="card-content">
-                            <div class="card-header-row">
-                                <div class="icon-bg danger">⚖️</div>
-                                <div class="header-text">
-                                    <h3>Daftar Pelanggaran</h3>
-                                    <p>Tambah atau hapus jenis pelanggaran & poin.</p>
-                                </div>
-                            </div>
-
-                            <div class="add-violation-wrapper">
-                                <div class="input-row-joined">
-                                    <input list="violation-suggestions" type="text" class="modern-input input-name" placeholder="Nama Pelanggaran (misal: Terlambat)">
-                                    <datalist id="violation-suggestions">
-                                        <option value="Terlambat Masuk Sekolah">
-                                        <option value="Tidak Memakai Dasi">
-                                        <option value="Membuang Sampah Sembarangan">
-                                    </datalist>
-
-                                    <input type="number" class="modern-input input-point" placeholder="Poin" min="1" max="100">
-                                    
-                                    <button class="btn-add-icon">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <div class="violation-list-container">
-                                <h5 class="list-label">Daftar Saat Ini:</h5>
-                                
-                                <div class="violation-scroll-area">
-                                    
-                                    <div class="violation-item-row">
-                                        <div class="v-text">
-                                            <span class="v-name">Terlambat Masuk</span>
-                                            <span class="v-code">K-01</span>
-                                        </div>
-                                        <div class="v-actions">
-                                            <span class="v-badge">-5 Poin</span>
-                                            <button class="btn-delete-icon" title="Hapus Pelanggaran">
-                                                🗑️
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <div class="violation-item-row">
-                                        <div class="v-text">
-                                            <span class="v-name">Atribut Tidak Lengkap</span>
-                                            <span class="v-code">K-04</span>
-                                        </div>
-                                        <div class="v-actions">
-                                            <span class="v-badge">-10 Poin</span>
-                                            <button class="btn-delete-icon" title="Hapus Pelanggaran">
-                                                🗑️
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <div class="violation-item-row">
-                                        <div class="v-text">
-                                            <span class="v-name">Merokok di area sekolah</span>
-                                            <span class="v-code">B-01</span>
-                                        </div>
-                                        <div class="v-actions">
-                                            <span class="v-badge red">-50 Poin</span>
-                                            <button class="btn-delete-icon" title="Hapus Pelanggaran">
-                                                🗑️
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    
-                    </div>
-                </section>
-            </main>
-        </div>
-
-        <div class="wave-section">
-            <svg class="wave" viewBox="0 0 1440 320">
-                <path fill="white" fill-opacity="1"
-                    d="M0,128L30,144C60,160,120,192,180,202.7C240,213,300,203,360,186.7C420,171,480,149,540,144C600,139,660,149,720,160C780,171,840,181,900,170.7C960,160,1020,128,1080,117.3C1140,107,1200,117,1260,128C1320,139,1380,149,1410,154.7L1440,160L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320H0V128Z">
-                </path>
-            </svg>
-            <div class="white-page">
-                <div class="area">
-                    <ul class="circles">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
 
         <script src="./program/database/pelanggaran.js"></script>
 
@@ -308,3 +148,4 @@
         </script>
 	</body>
 </html>
+
