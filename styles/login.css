@@ -1,0 +1,112 @@
+/* Reset & Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+/* Background */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+/* Login Card */
+.login-card {
+    background: rgba(225, 225, 225, 0.5);
+    backdrop-filter: blur(5px);
+    padding: 40px 30px;
+    border-radius: 5px;
+    outline: 10px rgb(255, 255, 255);
+    width: 450px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.login-card h1 {
+    font-family: "PT Sans Caption", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.login-card p {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #cfd8dc;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #cfd8dc;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 12px;
+    background-color: #1F2937;
+    color: #fff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: 2px solid #5A4A7A;
+    outline-offset: 2px;
+}
+
+/* Login Button */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background:#5A4A7A;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.login-btn:hover {
+    transform: scale(1.01);
+    opacity: 0.5;
+    box-shadow: 0 0 5px #D6C8FF;
+    color : #5A4A7A;
+}
+
+/* Forgot Password Link */
+.forgot-password {
+    margin-top: 15px;
+    font-size: 0.85rem;
+}
+
+.forgot-password a {
+    color: #F2ECFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.forgot-password a:hover {
+    color: white;
+}

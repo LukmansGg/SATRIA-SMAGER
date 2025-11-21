@@ -1,0 +1,177 @@
+/* --- Container Utama --- */
+.violation-table-container {
+    font-family: 'Segoe UI', sans-serif;
+    padding: 10px;
+}
+
+/* --- 1. Style Filter Tabs --- */
+.category-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    border: none;
+    background: #f1f2f6;
+    color: #636e72;
+    padding: 8px 16px;
+    border-radius: 20px;
+    /* Bentuk Pill */
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+    background: #dfe6e9;
+}
+
+/* State Aktif (Warna Ungu Tema Anda) */
+.tab-btn.active {
+    background: #6c5ce7;
+    /* Ungu Dashboard */
+    color: white;
+    box-shadow: 0 3px 8px rgba(108, 92, 231, 0.3);
+}
+
+.table-responsive {
+    overflow-x: hidden;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.modern-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    overflow-y: scroll;
+}
+
+.modern-table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: #f8f9fa;
+    color: #6c5ce7;
+    /* Judul kolom ungu */
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    padding: 15px;
+    text-align: left;
+    font-weight: 700;
+    border-bottom: 2px solid #ececec;
+}
+
+.modern-table tbody tr {
+    border-bottom: 1px solid #f1f2f6;
+    transition: background 0.2s;
+}
+
+/* Hover Effect pada Baris */
+.modern-table tbody tr:hover {
+    background-color: #f9f8ff;
+    /* Ungu sangat muda */
+    transform: scale(1.005);
+    /* Efek pop-up sedikit */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.modern-table td {
+    padding: 15px;
+    vertical-align: middle;
+    color: #2d3436;
+    font-size: 0.95rem;
+}
+
+/* --- 3. Badges & Typography --- */
+
+/* Style Kode (J1, P1) */
+.badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    min-width: 35px;
+    text-align: center;
+}
+
+.code-blue {
+    background: #e7f5ff;
+    color: #0984e3;
+}
+
+.code-green {
+    background: #e6fff2;
+    color: #00b894;
+}
+
+.code-orange {
+    background: #fff0e6;
+    color: #e17055;
+}
+
+.code-red {
+    background: #ffecec;
+    color: #d63031;
+}
+
+/* Style Kategori (Pill) */
+.cat-pill {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.cat-pill.blue {
+    color: #0984e3;
+    border: 1px solid rgba(9, 132, 227, 0.2);
+}
+
+.cat-pill.green {
+    color: #00b894;
+    border: 1px solid rgba(0, 184, 148, 0.2);
+}
+
+.cat-pill.orange {
+    color: #e17055;
+    border: 1px solid rgba(225, 112, 85, 0.2);
+}
+
+.cat-pill.red {
+    color: #d63031;
+    border: 1px solid rgba(214, 48, 49, 0.2);
+}
+
+/* Style Poin */
+.text-center {
+    text-align: center;
+}
+
+.point-text {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #636e72;
+}
+
+.point-alert {
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: #d63031;
+    /* Merah terang untuk poin besar */
+}
+
+.violation-desc {
+    font-weight: 500;
+}
+
+.high-alert {
+    color: #d63031;
+    font-weight: bold;
+}

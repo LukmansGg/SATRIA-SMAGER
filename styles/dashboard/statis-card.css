@@ -1,0 +1,210 @@
+:root {
+    --primary-purple: #6c5ce7;
+    --dark-purple: #483D8B;
+    --bg-card: #f8f9fa;
+    --text-dark: #2d3436;
+    --text-grey: #636e72;
+    --danger-red: #ff7675;
+}
+
+#pieChart {
+    width: 100%;
+    height: 180px;
+}
+
+.stats-wrapper {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    padding: 10px;
+}
+
+.chart-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- STYLE LIST PELANGGARAN (KANAN) --- */
+.violation-list-container {
+    flex: 1;
+    /* Lebar 50% */
+    background: #ffffff;
+    border-radius: 15px;
+    /* Border halus biar rapi */
+    padding: 20px;
+    height: 100%;
+    min-height: 300px;
+    /* Sesuaikan tinggi chart */
+}
+
+/* Header List & Sort Buttons */
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f1f2f6;
+    padding-bottom: 10px;
+}
+
+.list-header h4 {
+    margin: 0;
+    color: var(--text-dark);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.sort-controls {
+    background: #f1f2f6;
+    padding: 4px;
+    border-radius: 8px;
+    display: flex;
+    gap: 5px;
+}
+
+.sort-btn {
+    border: none;
+    background: transparent;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    border-radius: 6px;
+    cursor: pointer;
+    color: var(--text-grey);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.sort-btn.active {
+    background: var(--primary-purple);
+    color: white;
+    box-shadow: 0 2px 5px rgba(108, 92, 231, 0.4);
+}
+
+.sort-btn:hover:not(.active) {
+    background: #dfe6e9;
+}
+
+/* Area Scroll untuk List Item */
+.violation-scroll-area {
+    max-height: 250px;
+    /* Batasi tinggi agar bisa di-scroll jika banyak */
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+/* Scrollbar Kustom (Biar cantik) */
+.violation-scroll-area::-webkit-scrollbar {
+    width: 5px;
+}
+
+.violation-scroll-area::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+/* --- ITEM LIST --- */
+.violation-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px dashed #dfe6e9;
+    transition: transform 0.2s ease;
+}
+
+.violation-item:last-child {
+    border-bottom: none;
+}
+
+.violation-item:hover {
+    transform: translateX(5px);
+    /* Efek geser dikit pas di hover */
+    background-color: rgba(240, 240, 255, 0.5);
+    /* Highlight ungu tipis */
+    border-radius: 8px;
+    padding-left: 8px;
+}
+
+/* Avatar Bulat */
+.v-avatar {
+    width: 40px;
+    height: 40px;
+    background: var(--primary-purple);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 15px;
+    font-size: 1rem;
+}
+
+/* Variasi Warna Avatar */
+.v-avatar.color-2 {
+    background: #00cec9;
+}
+
+.v-avatar.color-3 {
+    background: #fab1a0;
+}
+
+/* Info Teks */
+.v-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.v-name {
+    font-weight: 700;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+}
+
+.v-desc {
+    font-size: 0.8rem;
+    color: var(--text-grey);
+}
+
+/* Meta Data (Poin & Waktu) */
+.v-meta {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.v-points {
+    font-weight: bold;
+    color: #e17055;
+    font-size: 0.9rem;
+    background: rgba(225, 112, 85, 0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.v-points.high-alert {
+    color: var(--danger-red);
+    background: rgba(255, 118, 117, 0.15);
+}
+
+.v-time {
+    font-size: 0.7rem;
+    color: #b2bec3;
+    margin-top: 2px;
+}
+
+/* Responsive: Kalau layar kecil, tumpuk ke bawah */
+@media (max-width: 768px) {
+    .stats-wrapper {
+        flex-direction: column;
+    }
+
+    .chart-container,
+    .violation-list-container {
+        width: 100%;
+    }
+}

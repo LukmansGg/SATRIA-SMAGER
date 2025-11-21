@@ -1,0 +1,436 @@
+.wave {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 5; /* Ensure it appears above the content */
+    animation: wave-animation 1s ease-in-out forwards;
+}
+
+
+.modern-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* Memberi jarak nafas antar input */
+    margin-top: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Label tebal dan gelap seperti di gambar */
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #2d3436;
+    margin-left: 4px;
+}
+
+/* Style Input Abu-abu Modern (Sesuai Request) */
+.modern-input {
+    width: 100%;
+    padding: 15px 20px;
+    /* Padding besar agar nyaman */
+    background-color: #f3f3f3;
+    /* Abu-abu sangat muda */
+    border: 1px solid transparent;
+    /* Border transparan default */
+    border-radius: 12px;
+    /* Sudut membulat */
+    font-size: 0.95rem;
+    color: #333;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Efek saat input diklik (Focus) */
+.modern-input:focus {
+    background-color: #ffffff;
+    border-color: #6c5ce7;
+    /* Border ungu saat aktif */
+    box-shadow: 0 4px 15px rgba(108, 92, 231, 0.1);
+    /* Shadow ungu halus */
+    outline: none;
+}
+
+/* Placeholder text style */
+.modern-input::placeholder {
+    color: #b2bec3;
+}
+
+/* Layout 2 Kolom untuk NIS dan Kelas */
+.form-row-split {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row-split .form-group {
+    flex: 1;
+}
+
+.btn-action.primary {
+    padding: 16px;
+    font-size: 1rem;
+    font-weight: 800;
+    /* Font tebal */
+    letter-spacing: 0.5px;
+    border-radius: 12px;
+    background:  rgba(108, 92, 231, 0.637);
+    /* Gradient Ungu */
+    box-shadow: 0 6px 5px rgba(108, 92, 231, 0.4);
+    /* Shadow ungu menyala */
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-action.primary:hover {
+    transform: translateY(-3px);
+    /* Efek naik saat hover */
+    box-shadow: 0 10px 25px rgba(133, 118, 248, 0.897);
+}
+
+/* Perbaikan Select Option agar panah rapi */
+select.modern-input {
+    appearance: none;
+    /* Hilangkan panah default browser */
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236c5ce7' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+    cursor: pointer;
+}
+
+/* Responsif untuk layar kecil (HP) */
+@media (max-width: 480px) {
+    .form-row-split {
+        flex-direction: column;
+    }
+}
+
+/* --- HEADER CARD ADJUSTMENT --- */
+.card-header-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.header-text h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.header-text p {
+    margin: 2px 0 0 0;
+    font-size: 0.85rem;
+    color: #e5eaec;
+}
+
+/* --- INPUT BAR (JOINED STYLE) --- */
+.add-violation-wrapper {
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.input-row-joined {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Input Nama (Flexible width) */
+.input-name {
+    flex: 3;
+    /* Mengambil porsi lebar paling banyak */
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+/* Input Poin (Fixed width kecil) */
+.input-point {
+    flex: 1;
+    max-width: 80px;
+    /* Lebar maksimal untuk angka */
+    text-align: center;
+    padding: 15px 5px;
+    /* Padding kiri kanan kecil */
+}
+
+/* Tombol Tambah (+) */
+.btn-add-icon {
+    width: 50px;
+    height: 50px;
+    /* Tinggi disamakan dengan input modern-input */
+    border-radius: 12px;
+    background: rgba(108, 92, 231, 0.637);
+    /* Warna Ungu */
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+    /* Agar tombol tidak mengecil */
+    box-shadow: 0 4px 10px rgba(108, 92, 231, 0.2);
+}
+
+.btn-add-icon:hover {
+    background: #6c5ce7;
+    transform: scale(1.05);
+}
+
+/* --- LIST PELANGGARAN (SCROLLABLE) --- */
+.violation-list-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding-top: 15px;
+}
+
+.list-label {
+    margin: 0 0 10px 0;
+    color: #636e72;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.violation-scroll-list {
+    max-height: 200px;
+    overflow-y: scroll;
+    padding-right: 5px;
+}
+
+.violation-scroll-list::-webkit-scrollbar {
+    width: 5px;
+}
+
+.violation-scroll-list::-webkit-scrollbar-thumb {
+    background: #dfe6e9;
+    border-radius: 10px;
+}
+
+/* --- ITEM ROW --- */
+.violation-item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 12px 15px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    transition: transform 0.2s, background 0.2s;
+    border: 1px solid transparent;
+}
+
+.violation-item-row:hover {
+    background: #fff;
+    border-color: #6c5ce7;
+    transform: translateX(3px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.v-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.v-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #2d3436;
+}
+
+.v-code {
+    font-size: 0.75rem;
+    color: #b2bec3;
+}
+
+.v-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.v-badge {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #6c5ce7;
+    background: rgba(108, 92, 231, 0.1);
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+.v-badge.red {
+    color: #d63031;
+    background: rgba(214, 48, 49, 0.1);
+}
+
+/* Tombol Hapus (Sampah) */
+.btn-delete-icon {
+    background: transparent;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    opacity: 0.3;
+    /* Transparan saat diam */
+    transition: all 0.2s;
+}
+
+.violation-item-row:hover .btn-delete-icon {
+    opacity: 1;
+    /* Muncul saat baris dihover */
+}
+
+.btn-delete-icon:hover {
+    transform: scale(1.2) rotate(10deg);
+    /* Efek goyang saat mau dihapus */
+}
+
+
+.wave-section {
+    width: 100%;
+    position: absolute;
+    top: 250%;
+    z-index: -1;
+}
+
+.white-page {
+    position: relative;
+    top: -10px;
+    background: white;
+    height: 130vh;
+}
+
+.area {
+    background: white;
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+    width: 100%;
+    height: 120vh;
+}
+
+.circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: #7a6faf;
+    animation: box_moves 25s linear infinite;
+    bottom: -150px;
+
+}
+
+.circles li:nth-child(1) {
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2) {
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3) {
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4) {
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5) {
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6) {
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7) {
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8) {
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9) {
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10) {
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes box_moves {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+
+

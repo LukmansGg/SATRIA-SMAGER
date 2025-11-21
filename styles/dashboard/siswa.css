@@ -1,0 +1,269 @@
+/* --- Sidebar Adjustment --- */
+.nav-btn {
+    margin-bottom: 20px;
+}
+
+.sidebar-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.avatar-circle img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.user-info h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: white;
+}
+
+.user-info span {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* --- PROFILE CARD LAYOUT (WIREFRAME GAMBAR 3) --- */
+
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 900px;
+    /* Lebar ideal */
+}
+
+/* -- BAGIAN ATAS (Foto & Data) -- */
+.profile-top-section {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    /* Kiri fix, Kanan auto */
+    gap: 40px;
+    align-items: start;
+}
+
+/* Foto Area */
+.photo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.photo-frame {
+    width: 100%;
+    aspect-ratio: 1/1;
+    /* Kotak Sempurna */
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    border: 5px solid #fff;
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.photo-frame:hover img {
+    transform: scale(1.05);
+}
+
+/* Badge Status di atas Foto */
+.status-badge {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: white;
+    background: #00b894;
+    /* Hijau Aman */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nis-label {
+    font-weight: 700;
+    color: #636e72;
+    background: #dfe6e9;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+}
+
+/* Data Area */
+.data-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    color: #b2bec3;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Style Read-Only Box (Mirip Input tapi tidak bisa diedit) */
+.read-only-box {
+    width: 100%;
+    padding: 15px 20px;
+    background: #f1f2f6;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2d3436;
+    border-left: 5px solid #6c5ce7;
+    /* Aksen Ungu */
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.03);
+}
+
+/* Poin Box Spesial */
+.poin-box-wrapper {
+    position: relative;
+}
+
+.poin-value {
+    border-left-color: #e17055;
+    /* Aksen Oranye */
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #dfe6e9;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #fab1a0, #ff7675);
+    border-radius: 10px;
+}
+
+/* Divider */
+.divider {
+    border: 0;
+    height: 1px;
+    background: #dfe6e9;
+    margin: 10px 0;
+}
+
+/* -- BAGIAN BAWAH (Status Cards) -- */
+.profile-bottom-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* 2 Kolom Sejajar */
+    gap: 20px;
+}
+
+.status-card {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.status-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.icon-status {
+    font-size: 2rem;
+    width: 60px;
+    height: 60px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.status-text h3 {
+    margin: 5px 0;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #2d3436;
+}
+
+.status-text p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #636e72;
+}
+
+.status-text label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #b2bec3;
+    display: block;
+}
+
+/* Warna Khusus Status */
+.warning-status .icon-status {
+    background: #fff3cd;
+}
+
+.warning-status h3 {
+    color: #e67e22;
+    /* Kuning Gelap */
+}
+
+.violation-type .icon-status {
+    background: #ffecec;
+}
+
+.violation-type h3 {
+    color: #d63031;
+    /* Merah */
+}
+
+/* RESPONSIVE (Mobile) */
+@media (max-width: 768px) {
+    .profile-top-section {
+        grid-template-columns: 1fr;
+        /* Tumpuk ke bawah */
+    }
+
+    .photo-frame {
+        width: 150px;
+        /* Kecilin foto di HP */
+        margin: 0 auto;
+    }
+
+    .photo-container {
+        margin-bottom: 20px;
+    }
+
+    .profile-bottom-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+.mockup-chart-siswa {
+    width: 100%;
+}
