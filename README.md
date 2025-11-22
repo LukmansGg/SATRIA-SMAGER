@@ -17,11 +17,12 @@
 ### 📝 2. Manajemen Pelanggaran
 * Fungsi CRUD (Tambah, Edit, Hapus) jenis pelanggaran.
 * Kustomisasi poin pelanggaran (ringan, sedang, berat).
-* Filter dan pencarian data *realtime*.
+* Filter dan pencarian data.
 
 ### 👥 3. Manajemen Akun Siswa
 * Tambah akun siswa baru (otomatis membuat *login* berdasarkan NIS).
 * Kelola data siswa.
+* Pantau pelanggaran siswa
 
 ### 📊 4. Dashboard Statistik Interaktif
 * Grafik *pie* mingguan untuk analisis tren.
