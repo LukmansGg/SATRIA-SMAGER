@@ -79,8 +79,6 @@ Lalu buka:
 
 ---
 
-# 🔧 Konfigurasi Penting
-
 ## 📌 Database Lokal
 Aplikasi menyimpan data pada:
 ```localStorage.accounts```
